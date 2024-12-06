@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio of Arulmurugan S</title>
+    <link rel="stylesheet" href=".css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <meta name="description" content="Portfolio of Arulmurugan S, a Front-End Developer showcasing projects, services, and contact information.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+:root {
+    --bg-color: #191f36;
+    --snd-bg-color: #262B40;
+    --text-color: #fff;
+    --main-color: #59B2F4;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 700;
+    cursor: default;
+}
+
+.navbar a {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 700;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.home-content h1 {
+    font-size: clamp(3rem, 5vw, 5.6rem);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-img img {
+    border-radius: 10px;
+    width: 30vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.5s ease;
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--snd-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    transition: 0.5s ease;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--snd-bg-color);
+}
+
+.about-img img {
+    width: 35vw;
+    border-radius: 10px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.about-content h3 {
+    font-size: 2.6rem;
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+/* Services Section */
+.services h2 {
+    margin-bottom: 5rem;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.services-box {
+    flex: 1 1 30rem;
+    background: var(--snd-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: 0.2rem solid var(--bg-color);
+    transition: 0.5s ease;
+}
+
+.services-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+
+.services-box i {
+    font-size: 7rem;
+    color: var(--main-color);
+}
+
+.services-box h3 {
+    font-size: 2.6rem;
+}
+
+.services-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+
+/* Portfolio Section */
+.portfolio {
+    background: var(--snd-bg-color);
+}
+
+.portfolio h2 {
+    margin-bottom: 4rem;
+}
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.portfolio-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    flex: 1 1 30rem;
+}
+
+.portfolio-box img {
+    width: 100%;
+    transition: 0.5s ease;
+    opacity: 0.7;
+}
+
+.portfolio-box:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: 0.5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer {
+    transform: translateY(0);
+}
+
+.portfolio-layer h4 {
+    font-size: 3rem;
+}
+
+.portfolio-layer p {
+    font-size: 1.6rem;
+    margin: 0.3rem 0 1rem;
+}
+.contact h2 {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    color: var(--text-color);
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto 3rem;
+    text-align: center;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--snd-bg-color);
+    border-radius: 0.8rem;
+    margin: 0.7rem 0;
+    border: 0.2rem solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.contact form .input-box input {
+    flex: 1;
+}
+
+.contact form textarea {
+    resize: none;
+    height: 10rem;
+}
+
+.contact form .input-box input:focus,
+.contact form textarea:focus {
+    border-color: var(--main-color);
+    outline: none;
+}
+
+.contact form button {
+    padding: 1.2rem 3rem;
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-size: 1.6rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact form button:hover {
+    background-color: var(--snd-bg-color);
+    color: var(--text-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--snd-bg-color);
+}
+.footer-text{
+    font-size: 1.6rem;
+}
+.footer-iconTop{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem 1rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+.footer-iconTop:hover{
+    box-shadow: 0 0 1rem var(--main-color);
+}
+.footer-iconTop a i{
+     font-size: 2.4rem;
+     color: var(--snd-bg-color);
+}
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- HEADER SECTION -->
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#services">SKILLS</a>
+            <a href="#portfolio">PORTFOLIO</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+    </header>
+
+    <!-- HOME SECTION -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hi, I'm</h3>
+            <h1>ARULMURUGAN S</h1>
+            <h3><span>Front-End Developer</span></h3>
+            <p>
+                Aspiring student eager to apply knowledge and gain hands-on experience 
+                through challenges provided by the industry. Committed to contributing 
+                creativity, enthusiasm, and a strong work ethic to support the team's 
+                goals and learn from industry experts.
+            </p>
+            <div class="social-media">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://github.com/Arulmurugan-S81"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="file:///C:/Users/aruls/Downloads/ARULMURUGAN%20CLG%20CV.pdf" class="btn">Download CV</a>
+        </div>
+        <div class="home-img">
+            <img src="image/5.jpg" alt="Profile Picture" height="600px">
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="image/1.jpg" alt="About Me Image">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">ABOUT <span>ME</span></h2>
+            <h3>Front-End Developer</h3>
+            <p>
+                Aspiring student eager to apply knowledge and gain hands-on experience 
+                through challenges provided by the industry. Committed to contributing 
+                creativity, enthusiasm, and a strong work ethic to support the team's 
+                goals and learn from industry experts.
+            </p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="services">
+        <h2 class="heading">My <span>Skills</span></h2>
+        <div class="services-container">
+            <div class="services-box">
+                <i class="fa-brands fa-html5"></i>
+                <h3>HTML</h3>
+                <p>
+                    I create responsive and user-friendly websites using modern 
+                    technologies to provide excellent user experiences.
+                </p>
+                <a href="#" class="btn">Read More</a>
+            </div> 
+        </div>
+        <div class="services-container">
+            <div class="services-box">
+                <i class="fa-brands fa-css3-alt"></i>
+                <h3>CSS</h3>
+                <p>
+                    Crafting visually appealing and functional designs that align with 
+                    branding and user needs.
+                </p>
+                <a href="#" class="btn">Read More</a>
+            </div> 
+        </div>
+        <div class="services-container">
+            <div class="services-box">
+                <i class="fa-brands fa-bootstrap"></i>
+                <h3>BOOTSTRAP</h3>
+                <p>
+                    Bootstrap is a free, open-source framework that helps web developers create websites and web apps more quickly and efficiently.
+                </p>
+                <a href="#" class="btn">Read More</a>
+            </div></div>
+            <div class="services-container">
+        <div class="services-box">
+            <i class="fa-brands fa-js"></i>
+            <h3>JAVASCRIPT</h3>
+            <p>
+                JavaScript is a lightweight, text-based programming language that is used to add interactivity to web pages, applications, and games.
+            </p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+    <div class="services-container">
+    <div class="services-box">
+        <i class="fa-solid fa-clipboard-question"></i>
+        <h3>JSON & JQUERY</h3>
+        <p>
+            jQuery is an open-source JavaScript library that simplifies the interactions between an HTML/CSS document, The getJSON() method in jQuery fetches JSON-encoded data from the server using a GET HTTP request.
+        </p>
+        <a href="#" class="btn">Read More</a>
+    </div>
+</div>
+<div class="services-container">
+    <div class="services-box">
+        <i class="fa-brands fa-react"></i>
+        <h3>REACT JS</h3>
+        <p>
+            React.js is a JavaScript library that helps simplify the process of building user interfaces for web applications and websites
+        </p>
+        <a href="#" class="btn">Read More</a>
+    </div> 
+</div>
+
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <a href="https://arulmurugan-s81.github.io/Bigfun-bags-/"><img src="image/bag banner5.webp" alt="Project Image">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Designed and developed an interactive website for a local business.</p>
+                    <i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div> 
+        </div><br>
+        
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <a href="https://arulmurugan-s81.github.io/HEALTHOK-PHARMA/"><img src="image/2.jpg" alt="Project Image">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Created a responsive portfolio site showcasing professional skills.</p>
+                    <i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div> 
+            </div><br>
+            <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="image/Screenshot 2024-12-06 100220.png" alt="Project Image">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Implemented a custom e-commerce platform for small businesses.</p>
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                </div>
+            </div>
+            </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-box">
+                <input type="text" name="mobile" placeholder="Mobile Number" required>
+                <input type="text" name="subject" placeholder="Subject">
+            </div>
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <input type="submit" value="submit" class="btn">
+        </form>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by Arulmurugan | All Rights Reserved</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fa-solid fa-angles-up"></i></a>
+        </div>
+    </footer>
+    
+    <script >     
+        // JavaScript for responsive navigation and form validation
+
+// Navbar toggle functionality
+const menuIcon = document.querySelector('#menu-icon');
+const navbar = document.querySelector('.navbar');
+
+menuIcon.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+    menuIcon.classList.toggle('active');
+});
+
+// Close the menu when a link is clicked
+const navLinks = document.querySelectorAll('.navbar a');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navbar.classList.remove('active');
+        menuIcon.classList.remove('active');
+    });
+});
+
+// Form validation
+const contactForm = document.querySelector('.contact form');
+const inputs = document.querySelectorAll('.contact form input, .contact form textarea');
+const mobileInput = document.querySelector('input[name="mobile"]');
+
+contactForm.addEventListener('submit', event => {
+    event.preventDefault(); // Prevent default form submission behavior
+    let isValid = true;
+
+    // Validate all input fields for empty values
+    inputs.forEach(input => {
+        if (!input.value.trim()) {
+            isValid = false;
+            input.style.border = '0.2rem solid red';
+        } else {
+            input.style.border = '0.2rem solid var(--snd-bg-color)';
+        }
+    });
+
+    // Validate mobile number
+    const mobilePattern = /^[0-9]{10}$/; // Regular expression for 10 digits only
+    if (mobileInput && !mobilePattern.test(mobileInput.value.trim())) {
+        isValid = false;
+        mobileInput.style.border = '0.2rem solid red';
+        alert('Mobile number must contain exactly 10 digits and no invalid characters!');
+    } else {
+        mobileInput.style.border = '0.2rem solid var(--snd-bg-color)';
+    }
+
+    if (isValid) {
+        alert('Form submitted successfully!');
+        contactForm.reset(); // Reset form inputs
+    } else {
+        alert('Please correct the highlighted fields before submitting.');
+    }
+});
+
+    </script>
+</body>
+</html>
